@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+
+<!-- Define o idioma da página -->
+<html lang="en">
+
+<head>
+
+    <!-- Define codificação UTF-8 -->
+    <meta charset="utf-8" />
+
+    <!-- Responsividade para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título dinâmico da página -->
+    <title>@ViewData["Title"] - CRUD_Dapper</title>
+
+    <!-- Import map do ASP.NET -->
+    <script type="importmap"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    <!-- CSS gerado automaticamente pelo ASP.NET -->
+    <link rel="stylesheet"
+          href="~/CRUD_Dapper.styles.css"
+          asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <!-- Navbar Bootstrap -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+            <div class="container-fluid">
+
+                <!-- Nome/logo do sistema -->
+                <a class="navbar-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    CRUD_Dapper
+
+                </a>
+
+                <!-- Botão do menu mobile -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- Área que colapsa em telas pequenas -->
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                    <!-- Lista de links -->
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <!-- Link Home -->
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark"
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <!-- Link Pessoas -->
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark"
+                               asp-controller="Pessoas"
+                               asp-action="Index">
+
+                                Pessoas
+
+                            </a>
+
+                        </li>
+
+                        <!-- Link Swagger -->
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark"
+                               href="/swagger">
+
+                                Swagger API
+
+                            </a>
+
+                        </li>
+
+                        <!-- Link Privacy -->
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark"
+                               asp-controller="Home"
+                               asp-action="Privacy">
+
+                                Privacy
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Container principal -->
+    <div class="container mt-4">
+
+        <!-- Conteúdo das Views -->
+        <main role="main" class="pb-3">
+
+            @RenderBody()
+
+        </main>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="border-top footer text-muted">
+
+        <div class="container">
+
+            &copy; 2026 - CRUD_Dapper
+
+            <!-- Link Privacy -->
+            <a asp-controller="Home"
+               asp-action="Privacy">
+
+                Privacy
+
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS personalizado -->
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    <!-- Renderiza scripts adicionais das Views -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

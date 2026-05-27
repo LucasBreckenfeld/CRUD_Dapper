@@ -1,0 +1,169 @@
+﻿/*
+========================================================
+ESTILO GLOBAL
+========================================================
+*/
+
+/* Fundo da aplicação */
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/*
+========================================================
+NAVBAR
+========================================================
+*/
+
+.navbar {
+    background-color: #0d6efd !important;
+    padding: 15px;
+}
+
+/* Logo */
+.navbar-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-link {
+    color: white !important;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+    /* Hover dos links */
+    .nav-link:hover {
+        color: #dbe9ff !important;
+    }
+
+/*
+========================================================
+CONTAINER PRINCIPAL
+========================================================
+*/
+
+.container {
+    margin-top: 30px;
+}
+
+/*
+========================================================
+TÍTULOS
+========================================================
+*/
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/*
+========================================================
+TABELAS
+========================================================
+*/
+
+table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+thead {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Espaçamento */
+th, td {
+    padding: 15px !important;
+    vertical-align: middle;
+}
+
+/* Hover linha */
+tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+/*
+========================================================
+BOTÕES
+========================================================
+*/
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    /* Hover */
+    .btn:hover {
+        transform: scale(1.03);
+    }
+
+/* Botão sucesso */
+.btn-success {
+    background-color: #198754;
+}
+
+/* Botão primário */
+.btn-primary {
+    background-color: #0d6efd;
+}
+
+/* Botão perigo */
+.btn-danger {
+    background-color: #dc3545;
+}
+
+/*
+========================================================
+FORMULÁRIOS
+========================================================
+*/
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+    /* Focus */
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 5px rgba(13,110,253,0.5);
+    }
+
+/*
+========================================================
+CARDS / ÁREAS
+========================================================
+*/
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/*
+========================================================
+FOOTER
+========================================================
+*/
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<CRUD_Dapper.Models.Pessoas>
+
+@{
+    ViewData["Title"] = "Listagem de Pessoas";
+}
+
+<!-- Container principal -->
+<div class="container">
+
+    <!-- Card principal -->
+    <div class="card shadow-lg p-4 mt-4">
+
+        <!-- Cabeçalho -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h1 class="fw-bold text-primary">
+                Listagem de Pessoas
+            </h1>
+
+            <!-- Botão Nova Pessoa -->
+            <a asp-action="Create"
+               class="btn btn-success">
+
+                + Nova Pessoa
+
+            </a>
+
+        </div>
+
+        <!-- Tabela responsiva -->
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <!-- Cabeçalho -->
+                <thead class="table-primary">
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Nome</th>
+
+                        <th>Idade</th>
+
+                        <th>Peso</th>
+
+                        <th class="text-center">
+                            Ações
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <!-- Corpo -->
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <!-- ID -->
+                            <td>
+                                @item.PessoaId
+                            </td>
+
+                            <!-- Nome -->
+                            <td>
+                                @item.Nome
+                            </td>
+
+                            <!-- Idade -->
+                            <td>
+                                @item.Idade anos
+                            </td>
+
+                            <!-- Peso -->
+                            <td>
+                                @item.Peso kg
+                            </td>
+
+                            <!-- Botões -->
+                            <td class="text-center">
+
+                                <!-- Container flex -->
+                                <div class="d-flex gap-2 justify-content-center">
+
+                                    <!-- Botão editar -->
+                                    <a asp-controller="Pessoas"
+                                       asp-action="Edit"
+                                       asp-route-pessoaid="@item.PessoaId"
+                                       class="btn btn-primary btn-sm">
+
+                                        Atualizar
+
+                                    </a>
+
+                                    <!-- Formulário excluir -->
+                                    <form asp-controller="Pessoas"
+                                          asp-action="Delete"
+                                          asp-route-pessoaid="@item.PessoaId"
+                                          method="post">
+
+                                        <button type="submit"
+                                                class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Deseja excluir @item.Nome ?')">
+
+                                            Excluir
+
+                                        </button>
+
+                                    </form>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
